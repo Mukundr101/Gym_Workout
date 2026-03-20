@@ -42,7 +42,21 @@ function App() {
     setWorkoutData(prevData => {
       const newExercises = [...prevData[muscle].exercises];
       const newSets = [...newExercises[exerciseIndex].sets];
-      newSets[setIndex] = weight;
+      newSets[setIndex] = { ...newSets[setIndex], weight };
+      newExercises[exerciseIndex] = { ...newExercises[exerciseIndex], sets: newSets };
+
+      return {
+        ...prevData,
+        [muscle]: { ...prevData[muscle], exercises: newExercises }
+      };
+    });
+  }, []);
+
+  const handleRepsChange = useCallback((muscle, exerciseIndex, setIndex, reps) => {
+    setWorkoutData(prevData => {
+      const newExercises = [...prevData[muscle].exercises];
+      const newSets = [...newExercises[exerciseIndex].sets];
+      newSets[setIndex] = { ...newSets[setIndex], reps };
       newExercises[exerciseIndex] = { ...newExercises[exerciseIndex], sets: newSets };
 
       return {
@@ -105,6 +119,7 @@ function App() {
               muscle={muscle}
               exercises={data.exercises}
               onWeightChange={handleWeightChange}
+              onRepsChange={handleRepsChange}
               onCheckboxChange={handleCheckboxChange}
               onResetGroup={handleResetGroup}
             />

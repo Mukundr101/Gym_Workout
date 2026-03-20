@@ -3,7 +3,7 @@ import Exercise from './Exercise';
 import { ChevronDown, ChevronUp } from 'lucide-react'; 
 import { muscleGroupColors, muscleGroupIcons } from '../data'; 
 
-const MuscleGroup = ({ muscle, exercises, onWeightChange, onCheckboxChange, onResetGroup }) => {
+const MuscleGroup = ({ muscle, exercises, onWeightChange, onRepsChange, onCheckboxChange, onResetGroup }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const completedCount = exercises.filter(ex => ex.completed).length;
@@ -24,7 +24,7 @@ const MuscleGroup = ({ muscle, exercises, onWeightChange, onCheckboxChange, onRe
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-bold">{muscle}</h2>
-              <p className="text-sm text-white/80">{completedCount}/5 exercises completed</p>
+              <p className="text-sm text-white/80">{completedCount}/{totalCount} exercises completed</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -59,6 +59,7 @@ const MuscleGroup = ({ muscle, exercises, onWeightChange, onCheckboxChange, onRe
               exerciseIndex={index}
               exerciseData={exercise}
               onWeightChange={onWeightChange}
+              onRepsChange={onRepsChange}
               onCheckboxChange={onCheckboxChange}
             />
           ))}

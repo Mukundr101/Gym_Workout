@@ -1,67 +1,62 @@
 export const initialWorkoutData = {
-  "Chest": {
-    exercises: [
-      { name: "Bench Press", sets: ["", "", ""], completed: false },
-      { name: "Incline Press", sets: ["", "", ""], completed: false },
-      { name: "Cable Flyes", sets: ["", "", ""], completed: false },
-      { name: "Pec Dec Fly", sets: ["", "", ""], completed: false },
-      { name: "Chest Dips", sets: ["", "", ""], completed: false },
+  "Chest":{
+      exercises: [
+     
+      { name: 'Bench Press', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Incline Press', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Cable Flyes', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Decline Press', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Pec Flys', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
+    ]},
+    "Back": {
+      exercises: [
+        { name: 'Lat Pulldowns', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+        { name: 'Dumbbell Rows', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+        { name: 'Cable Rows', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+        { name: 'Wide arm Rows', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Lat Pullovers', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
+    ]},
+    "Shoulders": {
+      exercises: [
+      { name: 'Overhead Press', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Cable Raises', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Front Raises', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Lateral Raises', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Rear Delt Flyes', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
+    ]},
+    "Biceps": {
+      exercises: [
+      { name: 'Barbell Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Hammer Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Preacher Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Concentration Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Cable Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
+    ]},
+    "Triceps": {
+      exercises: [
+      { name: 'Tricep Pushdowns', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Reverse Tricep Pushdowns', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Close-grip Bench', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Overhead Extension', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Tricep Dips', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
+    ]},
+    "Legs": {
+      exercises: [
+      { name: 'Hamstring Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Leg Press', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Lunges', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Leg Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Calf Raises', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
+    ]},
+    "Core": {
+      exercises: [
+      { name: 'Planks', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Crunches', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Russian Twists', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Leg Raises', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Cable Woodchops', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
     ]
-  },
-  "Back": {
-    exercises: [
-      { name: "Lat Pulldowns", sets: ["", "", ""], completed: false },
-      { name: "Reversed Grip  Pulldowns", sets: ["", "", ""], completed: false },
-      { name: "Cable Rows", sets: ["", "", ""], completed: false },
-      { name: "Wide Grip Cable Rows", sets: ["", "", ""], completed: false },
-      { name: "Barebell Rows", sets: ["", "", ""], completed: false },
-    ]
-  },
-  "Shoulders": {
-    exercises: [
-      { name: "Overhead Press", sets: ["", "", ""], completed: false },
-      { name: "Lateral Raises", sets: ["", "", ""], completed: false },
-      { name: "Front Raises", sets: ["", "", ""], completed: false },
-      { name: "Rear Delt Flyes", sets: ["", "", ""], completed: false },
-      { name: "Shrugs", sets: ["", "", ""], completed: false },
-    ]
-  },
-  "Biceps": {
-    exercises: [
-      { name: "Dumbell Curls", sets: ["", "", ""], completed: false },
-      { name: "Hammer Curls", sets: ["", "", ""], completed: false },
-      { name: "Preacher Curls", sets: ["", "", ""], completed: false },
-      { name: "Concentration Curls", sets: ["", "", ""], completed: false },
-      { name: "Cable Curls", sets: ["", "", ""], completed: false },
-    ]
-  },
-  "Triceps": {
-    exercises: [
-      { name: "Tricep Pushdowns", sets: ["", "", ""], completed: false },
-      { name: "Lateral cable tricep extension", sets: ["", "", ""], completed: false },
-      { name: "Overhead Extension", sets: ["", "", ""], completed: false },
-      { name: "Close-grip Bench", sets: ["", "", ""], completed: false },
-      { name: "Tricep Dips", sets: ["", "", ""], completed: false },
-    ]
-  },
-  "Legs": {
-    exercises: [
-      { name: "Leg Press", sets: ["", "", ""], completed: false },
-      { name: "Hack Squats", sets: ["", "", ""], completed: false },
-      { name: "Hmstring Curls", sets: ["", "", ""], completed: false },
-      { name: "Leg Curls", sets: ["", "", ""], completed: false },
-      { name: "Calf Raises", sets: ["", "", ""], completed: false },
-    ]
-  },
-  "Core": {
-    exercises: [
-      { name: "Planks", sets: ["", "", ""], completed: false },
-      { name: "Crunches", sets: ["", "", ""], completed: false },
-      { name: "Russian Twists", sets: ["", "", ""], completed: false },
-      { name: "Leg Raises", sets: ["", "", ""], completed: false },
-      { name: "Cable Woodchops", sets: ["", "", ""], completed: false },
-    ]
-  }
+}
 };
 
 // Also add the colors and icons here for better organization

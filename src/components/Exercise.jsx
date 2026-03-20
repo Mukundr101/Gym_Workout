@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Exercise = ({ muscle, exerciseIndex, exerciseData, onWeightChange, onCheckboxChange }) => {
+const Exercise = ({ muscle, exerciseIndex, exerciseData, onWeightChange, onRepsChange, onCheckboxChange }) => {
   const { name, sets, completed } = exerciseData;
 
   const handleCheckbox = (e) => {
@@ -9,6 +9,10 @@ const Exercise = ({ muscle, exerciseIndex, exerciseData, onWeightChange, onCheck
 
   const handleWeight = (setIndex, e) => {
     onWeightChange(muscle, exerciseIndex, setIndex, e.target.value);
+  };
+
+  const handleReps = (setIndex, e) => {
+    onRepsChange(muscle, exerciseIndex, setIndex, e.target.value);
   };
 
   return (
@@ -39,20 +43,32 @@ const Exercise = ({ muscle, exerciseIndex, exerciseData, onWeightChange, onCheck
             {name}
           </h3>
           <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-2">
-            {sets.map((weight, setIndex) => (
+            {sets.map((set, setIndex) => (
               <div key={setIndex}>
                 <label className="block text-xs text-gray-400 mb-1">Set {setIndex + 1}</label>
+                <div className="relative mb-2">
+                  <input
+                    type="number"
+                    min="0"
+                    max="999"
+                    value={set.weight || ''}
+                    onChange={(e) => handleWeight(setIndex, e)}
+                    placeholder="0"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-gray-500 pr-8"
+                  />
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-sm">kg</span>
+                </div>
                 <div className="relative">
                   <input
                     type="number"
                     min="0"
                     max="999"
-                    value={weight}
-                    onChange={(e) => handleWeight(setIndex, e)}
+                    value={set.reps || ''}
+                    onChange={(e) => handleReps(setIndex, e)}
                     placeholder="0"
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-gray-500 pr-8" // Added pr-8 for kg suffix
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-gray-500 pr-8"
                   />
-                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-sm">kg</span>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-sm">reps</span>
                 </div>
               </div>
             ))}
