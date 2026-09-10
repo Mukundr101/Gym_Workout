@@ -11,6 +11,7 @@ export const initialWorkoutData = {
     "Back": {
       exercises: [
         { name: 'Lat Pulldowns', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+        { name: 'Close Grip Lat Pulldowns', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
         { name: 'Dumbbell Rows', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
         { name: 'Cable Rows', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
         { name: 'Wide arm Rows', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
@@ -29,7 +30,7 @@ export const initialWorkoutData = {
       { name: 'Barbell Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
       { name: 'Hammer Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
       { name: 'Preacher Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
-      { name: 'Concentration Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Incline Dumbell Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
       { name: 'Cable Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
     ]},
     "Triceps": {
@@ -44,7 +45,7 @@ export const initialWorkoutData = {
       exercises: [
       { name: 'Hamstring Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
       { name: 'Leg Press', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
-      { name: 'Lunges', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
+      { name: 'Squats', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
       { name: 'Leg Curls', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false },
       { name: 'Calf Raises', sets: [{weight: '', reps: ''}, {weight: '', reps: ''}, {weight: '', reps: ''}], completed: false }
     ]},
